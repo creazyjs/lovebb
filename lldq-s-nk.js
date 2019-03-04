@@ -88,7 +88,8 @@ var bq = biaoqing[Math.floor(Math.random() * biaoqing.length)];
     'http://qiniu.jiliguala.com/prod/avatar/5f2a87e53ca027b6ade13cc81bc89e44.jpg',
     'http://static.qiniu.yuenr.com/head/2019/3/2/1551541021488.jpg',
     'http://hotbb.repinchen.cn/78990',
-    'http://img.xiaodao360.com/5c6fb7863d7685wdJcX07d2pyfjaoSSA.html',
+    'http://public.goodfatherapp.com/avatar/ff8081816675afe801668162a23567fa/1551664958554',
+
   ];
 
   var g_bxarray = [
@@ -97,7 +98,8 @@ var bq = biaoqing[Math.floor(Math.random() * biaoqing.length)];
     'http://qiniu.jiliguala.com/prod/avatar/5f2a87e53ca027b6ade13cc81bc89e44.jpg',
     'http://static.qiniu.yuenr.com/head/2019/3/2/1551541021488.jpg',
     'http://hotbb.repinchen.cn/78990',
-    'http://img.xiaodao360.com/5c6fb7863d7685wdJcX07d2pyfjaoSSA.html',
+    'http://public.goodfatherapp.com/avatar/ff8081816675afe801668162a23567fa/1551664958554',
+
   ];
 
   var i3 = parseInt(g_pc['i3']);
