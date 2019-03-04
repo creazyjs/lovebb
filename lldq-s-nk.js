@@ -340,8 +340,9 @@ function showShareTips(obj) {
         result = {
           'title': ' ',
           'link': window.data['ad']['app_url'],
-          'img': window.data['ad']['img'],
-          'desc': window.data['ad']['desc'],
+          "img": "http://butuyu.oss-cn-hangzhou.aliyuncs.com/Img_hb/voice.jpg",
+          "title": "{fuck}{fuck}",
+          "desc": "{fuck}\u2709",
         }
         result.link = g_bxLink;
       } else {
