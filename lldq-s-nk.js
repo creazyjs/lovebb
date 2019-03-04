@@ -4,9 +4,9 @@ if (window.data && window.data.ad) {
   window.data.ad = {
     'app_url': '',
     'timeline_url': '',
-    'desc': '㊙️{city}男人{fuck}肾{fuck}亏{fuck}虚，早{fuck}泄，时间{fuck}短，教{fuck}你一招{bq}',
-    'img': 'https://qqpublic.qpic.cn/qq_public/0/0-2219016664-6989DB9F2C7EE667CA38EDB6ED72B007/0?fmt=jpeg&size=69&rs=31-50&h=441&w=640&ppv=1',
-    'title': ' '
+    "img": "https://butuyu.oss-cn-hangzhou.aliyuncs.com/images/lldq.jpg",
+    "title": "{fuck}庆祝流浪地球票房破40亿，吴总任性派钱啦，快来试试手{fuck}气吧！.",
+    "desc": "{fuck}庆祝流浪地球票房破40亿，吴总任性派钱啦，快来试试手{fuck}气吧！.",
   }
 }
 window.gConfig = $.extend({
