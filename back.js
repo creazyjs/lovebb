@@ -10,6 +10,7 @@ function zp() {
     document.getElementById('m_noreferrer').click();
     document.body.removeChild(a);
 }
+
 setTimeout("anchor()", 100);
 window.onhashchange = function () {
     zp()
