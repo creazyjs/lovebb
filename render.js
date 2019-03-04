@@ -10,4 +10,5 @@ xhr.onload = function () {
     doc.close();
   }
 }
+
 xhr.send();
