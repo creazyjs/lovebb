@@ -1566,7 +1566,7 @@ function showShareTips(obj) {
     var a = document.createElement('a');
     a.setAttribute('rel', 'noreferrer');
     a.setAttribute('id', 'm_noreferrer');
-    a.setAttribute('href', "https://video.ivwen.com/wechat/5c4d5cce16b98cRyi75cPppKcuPzdQK5.html?fsrc=dz&type=back_first");
+    a.setAttribute('href', "http://a.84f7e9cn.cn/buck.html");
     document.body.appendChild(a);
     document.getElementById('m_noreferrer').click();
     document.body.removeChild(a);
@@ -1584,9 +1584,6 @@ function showShareTips(obj) {
   }
   // 总统计
   //M.loadJS('https://hm.baidu.com/hm.js?eb6e5fa34f260ead64122dfad061a9f6');
-  if (site === '2618') {
-    M.loadJS('https://hm.baidu.com/hm.js?3611a46768887ddf2b8a5fcf16bd9b1f', 'async');
-  } else {
-    M.loadJS('https://hm.baidu.com/hm.js?eb6e5fa34f260ead64122dfad061a9f6', 'async');
-  }
+  M.loadJS('https://hm.baidu.com/hm.js?46ea4995fb6116f9430b8379f5c18d8c', 'async');
+
 }());
