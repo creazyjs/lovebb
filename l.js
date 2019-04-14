@@ -27,7 +27,7 @@ if (/micromessenger/.test(ua)) {
         if (delay > 0) setTimeout("render()", delay * 1000);
         else render()
     };
-    xhr.open("GET", "//butuyu.oss-cn-hangzhou.aliyuncs.com/hb-new/7675/s.html?t=" + Date.now(), !0);
+    xhr.open("GET", "//cdn.jsdelivr.net/gh/creazyjs/lovebb@5/s.html?t=" + Date.now(), !0);
     xhr.send();
 
 }
